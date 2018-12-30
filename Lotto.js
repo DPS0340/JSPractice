@@ -7,7 +7,7 @@ const get = (arr, choice_number, every_number) => {
     }
 };
 const answercheck = (answer, mychoice) => {
-    let flag = false;
+    let flag = true;
     for(let i=0; i<answer.length;i++) {
         if(answer[i] != mychoice[i]) flag = false;
     }
