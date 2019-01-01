@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roll & Work!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<img>
+<div>
+<img src="dice.jpg"></img><br>
+<p1>굴려 굴려!</p1><br>
+    <p1 id="money" value=0>0달러</p1><br>
+    <p1 id="status">상태창</p1><br>
+    <button class="btn btn btn-outline-primary" id="makemoney">돈벌기</button>
+</div>
+<input id="dice" type="number" placeholder="주사위 면수"></input><br>
+<input id="rolls" type="number" placeholder="몇 번 굴리기"></input><br>
+<input id="bet" type="number" placeholder="거는 금액"></input><br>
+<button class="btn btn btn-outline-primary" id="rollit">굴려!</button>
+</body>
+<script>
+    const setvalue = (amount) => {
+        $("#money").val("").val(amount).text("").text(amount + "달러");
+    };
+    const addvalue = (amount) => {
+        let money = $("#money").val();
+        setvalue(Number(money) + Number(amount));
+    };
+    const subvalue = (amount) => {
+        let money = $("#money").val();
+        setvalue(Number(money) - Number(amount));
+    };
+    function Dice(k) {
+        this.k = k;
+        console.log(`${k}면체 주사위`);
+    }
+    Dice.prototype.roll = function (n) {
+        let sum = 0;
+        for(let i=0;i<n;i++) {
+            let result = Math.floor(Math.random() * this.k) + 1;
+            sum += result;
+        }
+        return sum;
+        alert(sum);
+    };
+    Dice.prototype.get = function () {
+        return this.k;
+    };
+    function play(bet, k, n) {
+        let dice = new Dice(k);
+        let result = dice.roll(n);
+        if (result > k * n / 2) {
+            return bet * 2;
+        } else if (result < k * n / 2) {
+            return 0;
+        } else {
+            return bet;
+        }
+    }
+    $("#makemoney").click(function () {
+        addvalue(3000);
+    });
+    $("#rollit").click(function () {
+        let k = Number($("#dice").val());
+        let n = Number($("#rolls").val());
+        let value = Number($("#bet").val());
+        if(k === 1) {
+            alert("꼼수 쓰지 마세요!");
+        }
+        else {
+            subvalue(value);
+            let result = play(value, k, n);
+            if (result > value) {
+                $("#status").text("이겼습니다!");
+            } else if (result === value) {
+                $("#status").text("비겼습니다!");
+            } else if (result < value) {
+                $("#status").text("졌습니다!");
+            }
+            addvalue(result);
+        }
+    });
+</script>
+</html>
