@@ -70,7 +70,7 @@
         let k = Number($("#dice").val());
         let n = Number($("#rolls").val());
         let value = Number($("#bet").val());
-        if(k === 1) {
+        if(k === 1 || value > $("#money").val()) {
             alert("꼼수 쓰지 마세요!");
         }
         else {
