@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cccba641-9838-4483-b516-84a2e2656bab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/WorkHardPlayHard.html" beforeDir="false" afterPath="$PROJECT_DIR$/WorkHardPlayHard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/dice.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/WorkHardPlayHard.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,13 +42,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WorkHardPlayHard.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="148">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -107,6 +114,11 @@
               <item name="JSPractice" type="b2602c69:ProjectViewProjectNode" />
               <item name="JSPractice" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="JSPractice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JSPractice" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -129,6 +141,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -176,7 +193,7 @@
       <updated>1546168389252</updated>
       <workItem from="1546168390415" duration="4880000" />
       <workItem from="1546257944125" duration="1770000" />
-      <workItem from="1546332949824" duration="4811000" />
+      <workItem from="1546332949824" duration="5293000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1546170748652</created>
@@ -199,15 +216,35 @@
       <option name="project" value="LOCAL" />
       <updated>1546337645043</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change picture">
+      <created>1546337783298</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546337783298</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change picture">
+      <created>1546337802761</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546337802761</updated>
+    </task>
+    <task id="LOCAL-00006" summary="github pages for deploy">
+      <created>1546337889890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546337889890</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11461000" />
+    <option name="totallyTimeSpent" value="11943000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="0" width="1928" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12118019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -247,7 +284,9 @@
     <MESSAGE value="init" />
     <MESSAGE value="work in progress" />
     <MESSAGE value="Dice Roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dice Roll" />
+    <MESSAGE value="change picture" />
+    <MESSAGE value="github pages for deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="github pages for deploy" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Lotto.js">
@@ -274,9 +313,12 @@
     <entry file="file://$PROJECT_DIR$/WorkHardPlayHard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
