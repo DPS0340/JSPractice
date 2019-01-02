@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snake!</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="snake">
+<p1 id="1" style="position:relative;">⬛</p1>
+<p1 id="2" style="position:relative;">⬛</p1>
+<p1 id="3" style="position:relative;">⬛</p1>
+<p1 id="4" style="position:relative;">⬛</p1>
+<p1 id="5" style="position:relative;">⬛</p1>
+<p1 id="6" style="position:relative;">⬛</p1>
+</div>
+<script>
+    $(document).ready(function () {
+        let value = "right";
+        let distance = 30;
+        setInterval(function(){
+            if(value === "right") {
+                for(let i=1; i<=6; i++) {
+                    let style = $("#" + String(i));
+                    style.offset({left: style.offset().left + distance});
+                }
+            }
+        }, 500);
+    });
+</script>
+</body>
+</html>
