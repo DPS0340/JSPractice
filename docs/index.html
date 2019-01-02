@@ -13,29 +13,18 @@
 </head>
 <img>
 <div>
-<img src="dice.jpg"></img><br>
+<img src="dice.jpg"/><br>
 <p1>굴려 굴려!</p1><br>
     <p1 id="money" value=0>0달러</p1><br>
     <p1 id="status">상태창</p1><br>
     <button class="btn btn btn-outline-primary" id="makemoney">돈벌기</button>
 </div>
-<input id="dice" type="number" placeholder="주사위 면수"></input><br>
-<input id="rolls" type="number" placeholder="몇 번 굴리기"></input><br>
-<input id="bet" type="number" placeholder="거는 금액"></input><br>
+<input id="dice" type="number" placeholder="주사위 면수"/><br>
+<input id="rolls" type="number" placeholder="몇 번 굴리기"/><br>
+<input id="bet" type="number" placeholder="거는 금액"/><br>
 <button class="btn btn btn-outline-primary" id="rollit">굴려!</button>
 </body>
 <script>
-    const setvalue = (amount) => {
-        $("#money").val("").val(amount).text("").text(amount + "달러");
-    };
-    const addvalue = (amount) => {
-        let money = $("#money").val();
-        setvalue(Number(money) + Number(amount));
-    };
-    const subvalue = (amount) => {
-        let money = $("#money").val();
-        setvalue(Number(money) - Number(amount));
-    };
     function Dice(k) {
         this.k = k;
     }
@@ -46,10 +35,6 @@
             sum += result;
         }
         return sum;
-        alert(sum);
-    };
-    Dice.prototype.get = function () {
-        return this.k;
     };
     function play(bet, k, n) {
         let dice = new Dice(k);
@@ -63,13 +48,26 @@
         }
     }
     $("#makemoney").click(function () {
-        addvalue(3000);
+        (() => {
+            let money = $("#money").val();
+            $("#money").val("").val(Number(money) + Number(3000)).text("").text(Number(money) + Number(3000) + "달러")})();
     });
     $("#rollit").click(function () {
+        const setvalue = (amount) => {
+            $("#money").val("").val(amount).text("").text(amount + "달러");
+        };
+        const addvalue = (amount) => {
+            let money = $("#money").val();
+            setvalue(Number(money) + Number(amount));
+        };
+        const subvalue = (amount) => {
+            let money = $("#money").val();
+            setvalue(Number(money) - Number(amount));
+        };
         let k = Number($("#dice").val());
         let n = Number($("#rolls").val());
         let value = Number($("#bet").val());
-        if(k <== 1 || value > Number($("#money").val()) || n <== 0 || k <== 0) {
+        if(k <= 1 || value > Number($("#money").val()) || n <= 0) {
             alert("꼼수 쓰지 마세요!");
         }
         else {
